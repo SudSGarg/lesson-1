@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 # This is an environment variable. We can use this later to teach them CI/CD config
 ENVIRONMENT = os.getenv("APP_ENV", "DEVELOPMENT")
-PORT = int(os.getenv("PORT", 5555))
+PORT = int(os.getenv("PORT", 6666))
 
 # HTML Template stored as a string so they don't have to manage multiple files yet
 HTML_TEMPLATE = """
