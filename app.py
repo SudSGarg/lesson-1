@@ -4,8 +4,8 @@ from flask import Flask, jsonify, render_template_string
 app = Flask(__name__)
 
 # This is an environment variable. We can use this later to teach them CI/CD config
-ENVIRONMENT = os.getenv("APP_ENV", "DEVELOPMENT")
-PORT = int(os.getenv("PORT", 6666))
+ENVIRONMENT = os.getenv("APP_ENV", "Development")
+PORT = int(os.getenv("PORT", 5555))
 
 # HTML Template stored as a string so they don't have to manage multiple files yet
 HTML_TEMPLATE = """
@@ -39,6 +39,6 @@ def health():
     return jsonify({"status": "healthy", "environment": ENVIRONMENT}), 200
 
 if __name__ == '__main__':
-    # Listen on port 5555. Great for teaching network routing/ports later
+    # Listen on port 6666. Great for teaching network routing/ports later
     app.run(host='0.0.0.0', port=PORT, debug=True if ENVIRONMENT == "Development" else False)
  
