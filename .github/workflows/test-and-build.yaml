@@ -16,4 +16,7 @@ jobs:
 
       - name: Test my syntax
         run: python -m py_compile app.py
-         
+
+      - name: Hello
+        run: echo "Hello"
+           
